@@ -64,10 +64,7 @@ public class AccountCrudRepository implements AccountRepository {
         accountDao.setAccountType(account.getAccountType());
         accountDao.setCommission(account.getCommission());
         accountDao.setLimitMovement(account.getLimitMovement());
-        accountDao.setMovementDay(account.getMovementDay());
-        accountDao.setNumber(account.getNumber());
-        accountDao.setNumberOfHolder(account.getNumberOfHolder());
-        accountDao.setNumberOfSigner(account.getNumberOfSigner());
+        accountDao.setName(account.getName());
         return accountDao;
     }
     /*
@@ -79,10 +76,7 @@ public class AccountCrudRepository implements AccountRepository {
         account.setAccountType(accountDao.getAccountType());
         account.setCommission(accountDao.getCommission());
         account.setLimitMovement(accountDao.getLimitMovement());
-        account.setMovementDay(accountDao.getMovementDay());
-        account.setNumber(accountDao.getNumber());
-        account.setNumberOfHolder(accountDao.getNumberOfHolder());
-        account.setNumberOfSigner(accountDao.getNumberOfSigner());
+        account.setName(accountDao.getName());
         return account;
     }
     /*

@@ -4,7 +4,7 @@ import com.nttdata.product.domain.AccountType;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Id;
+import org.springframework.data.annotation.Id;
 /**
  * ACCOUNTDAO: Contiene los atributos del documento Cuenta (Account) para la persistencia
  */
@@ -14,10 +14,7 @@ public class AccountDao {
     @Id
     private String id;
     private AccountType accountType;
-    private String number;
+    private String name;
     private Long commission;
     private int limitMovement;
-    private String movementDay;
-    private int numberOfHolder;
-    private int numberOfSigner;
 }

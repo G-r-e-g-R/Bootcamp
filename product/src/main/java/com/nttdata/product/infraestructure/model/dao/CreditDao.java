@@ -4,7 +4,7 @@ import com.nttdata.product.domain.CreditType;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Id;
+import org.springframework.data.annotation.Id;
 /**
  * ACREDITDAO: Contiene los atributos del documento Credito (Credit) para la persistencia
  */

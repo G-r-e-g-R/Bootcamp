@@ -2,11 +2,13 @@ package com.nttdata.product.application;
 
 import com.nttdata.product.domain.Account;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 /**
  * ACCOUNTOPERATIONSIMPL: Implementa las operaciones (CRUD) de las cuentas bancarias (Account)
  */
+@Service
 public class AccountOperationsImpl implements  AccountOperations{
     @Autowired
     AccountRepository repository;

@@ -3,11 +3,13 @@ package com.nttdata.product.application;
 import com.nttdata.product.domain.Credit;
 import com.nttdata.product.infraestructure.model.dao.CreditDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 /**
  * CREDITOPERATIONSIMPL: Implementa las operaciones (CRUD) de los creditos (Credit)
  */
+@Service
 public class CreditOperationsImpl implements CreditOperations{
     @Autowired
     CreditRepository repository;
