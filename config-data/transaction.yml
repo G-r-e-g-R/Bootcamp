@@ -15,3 +15,6 @@ management:
     hystrix:
       stream:
         enabled: true
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"		
