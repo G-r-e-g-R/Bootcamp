@@ -87,12 +87,16 @@ public class AccountAffiliationCrudRepository implements AccountAffiliationRepos
     private AccountAffiliation mapAccountAffiliationDaoToAccountAffiliation(AccountAffiliationDao accountAffiliationDao){
         AccountAffiliation accountAffiliation = new AccountAffiliation();
         System.out.println("[mapAccountAffiliationDaoToAccountAffiliation] accountAffiliationDao.getIdCustomer():"+accountAffiliationDao.getIdCustomer());
-        Mono<Customer> c = customerClient.getById(accountAffiliationDao.getIdCustomer());
+        System.out.println("[mapAccountAffiliationDaoToAccountAffiliation] accountAffiliationDao.getId():"+accountAffiliationDao.getId());
+        //Mono<Customer> c = customerClient.getById(accountAffiliationDao.getIdCustomer());
+        Mono<Customer> c = customerClient.getById("619b24ee75c5de6a11afaf5a");
+        System.out.println("c:"+c);
         accountAffiliation.setCustomer(c.block());
+        System.out.println("setCustomer OK");
         accountAffiliation.setAccount(accountAffiliationDao.getAccount());
         accountAffiliation.setBalance(accountAffiliationDao.getBalance());
         accountAffiliation.setBaseAmount(accountAffiliationDao.getBaseAmount());
-        accountAffiliation.setCustomer(accountAffiliationDao.getCustomer());
+
         accountAffiliation.setId(accountAffiliationDao.getId());
         accountAffiliation.setStatus(accountAffiliationDao.getStatus());
         accountAffiliation.setNumber(accountAffiliationDao.getNumber());

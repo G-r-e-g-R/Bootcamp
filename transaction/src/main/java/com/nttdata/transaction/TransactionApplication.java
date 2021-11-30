@@ -4,13 +4,19 @@ import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import reactivefeign.spring.config.EnableReactiveFeignClients;
 
 @SpringBootApplication
 @OpenAPIDefinition(info = @Info(title = "APIs", version = "1.0", description = "Documentation APIs v1.0"))
-@EnableDiscoveryClient
-@EnableFeignClients
+@EnableEurekaClient
+@EnableReactiveFeignClients
+@EnableHystrixDashboard
+@EnableHystrix
 public class TransactionApplication {
 
 	public static void main(String[] args) {

@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
  */
 @Slf4j
 @RestController
-@RequestMapping("/account")
+@RequestMapping("/product/account")
 @RequiredArgsConstructor
 public class AccountController {
     private final AccountOperations accountOperations;

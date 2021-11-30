@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
  */
 @Slf4j
 @RestController
-@RequestMapping("/accountAffiliation")
+@RequestMapping("/transactions/accountAffiliation")
 @RequiredArgsConstructor
 public class AccountAffiliationController {
     private final AccountAffiliationOperations accountAffiliationOperations;
